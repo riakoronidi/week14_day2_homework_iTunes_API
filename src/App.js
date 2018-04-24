@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SongContainer from './containers/SongContainer';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      "i tunes api"
+      <SongContainer />
     );
   }
 }
