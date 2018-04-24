@@ -26,7 +26,7 @@ class SongContainer extends React.Component{
   }
 
   handleIndexSelected(index){
-    const selectedIndex = this.state.index;
+    const selectedIndex = index;
     this.setState({currentIndex: selectedIndex});
   }
 
@@ -37,7 +37,7 @@ class SongContainer extends React.Component{
         <SongList songs ={this.state.songs}
           onSongSelected={this.handleSongSelected}>
         </SongList>
-        <Song song={this.state.currentSong} index={this.handleIndexSelected}>
+        <Song song={this.state.currentSong} OnIndex={this.handleIndexSelected}>
         </Song>
       </React.Fragment>
     )
