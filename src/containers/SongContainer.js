@@ -17,6 +17,7 @@ class SongContainer extends React.Component{
   componentDidMount(){
     fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
     .then(response => response.json())
+    // .then(json => {debugger})
     .then(json => this.setState({songs: json.feed.entry}));
   }
 
