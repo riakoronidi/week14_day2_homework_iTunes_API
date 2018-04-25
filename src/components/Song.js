@@ -25,7 +25,7 @@ const Song = (props) => {
       <ul>
         <ol>Song title: {props.song['im:name'].label}</ol>
         <ol>Artist: {props.song['im:artist'].label}</ol>
-        <ol >Number in charts: {props.index}</ol>
+        <ol >Number in charts: {props.chartPosition}</ol>
         <ol><img style={{width:"170px", margin: "10px"}} src={images[2]} alt={props.song['im:name'].label}/></ol>
         {/* <ol>{imageArray}</ol> */}
       </ul>

@@ -10,7 +10,8 @@ const SongList = (props) => {
   const handleChange = (event) => {
     let index = event.target.value;
     props.onSongSelected(index);
-    props.onIndexSelected(index);
+    //using parseInt to return index as a number and then adding + 1 in SongContainer
+    props.onIndexSelected(parseInt(index));
   }
 
   return(
