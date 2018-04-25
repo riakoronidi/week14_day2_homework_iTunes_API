@@ -1,4 +1,5 @@
 import React from 'react';
+import Song from './Song';
 
 const SongList = (props) => {
 
@@ -9,6 +10,7 @@ const SongList = (props) => {
   const handleChange = (event) => {
     let index = event.target.value;
     props.onSongSelected(index);
+    props.onIndexSelected(index);
   }
 
   return(

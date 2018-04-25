@@ -8,14 +8,16 @@ const Song = (props) => {
     for(let image of props.song['im:image']){
       images.push(image.label)
     };
-    console.log(images);
+//this is to return all the images from the images array in to the screen
+    const imageArray = images.map(image => {
+      return <img src={image}/>
+    })
 
 
 
     const getIndex = () => {
-      let index = 0;
-      props.OnIndex(index);
-      // return index;
+      const result = props.index + 1
+      return result;
     }
 
   return(
@@ -23,10 +25,10 @@ const Song = (props) => {
       <ul>
         <ol>Song title: {props.song['im:name'].label}</ol>
         <ol>Artist: {props.song['im:artist'].label}</ol>
-        <ol>Number in charts: {getIndex}</ol>
+        <ol >Number in charts: {props.index}</ol>
         <ol><img style={{width:"70px", margin: "10px"}} src={images[0]} alt={props.song['im:name'].label}/></ol>
+        {/* <ol>{imageArray}</ol> */}
       </ul>
-      {/* <img src={images.map((image) => image)} alt={props.song['im:name'].label}/> */}
     </article>
   )
 

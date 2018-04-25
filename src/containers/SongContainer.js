@@ -35,9 +35,9 @@ class SongContainer extends React.Component{
       <React.Fragment>
         <h3>Top 20 UK 2018</h3>
         <SongList songs ={this.state.songs}
-          onSongSelected={this.handleSongSelected}>
+          onSongSelected={this.handleSongSelected} onIndexSelected={this.handleIndexSelected}>
         </SongList>
-        <Song song={this.state.currentSong} OnIndex={this.handleIndexSelected}>
+        <Song song={this.state.currentSong} index={this.state.currentIndex}>
         </Song>
       </React.Fragment>
     )
